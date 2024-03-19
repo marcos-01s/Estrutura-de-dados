@@ -19,18 +19,18 @@ public class RegistroClientes {
     }
 
     private int calcularChaveHash(String cpf) {
-        // Simplificação: calcula a chave hash usando o hashCode do CPF
+        
         return cpf.hashCode();
     }
 
     public static void main(String[] args) {
         RegistroClientes registro = new RegistroClientes();
 
-        // Adiciona alguns clientes para exemplo
+        
         registro.adicionarCliente("João", "123456789", "123.456.789-01", "joao@example.com");
         registro.adicionarCliente("Maria", "987654321", "987.654.321-09", "maria@example.com");
 
-        // Busca um cliente pelo CPF
+        
         Cliente clienteEncontrado = registro.buscarCliente("123.456.789-01");
         if (clienteEncontrado != null) {
             System.out.println("Cliente encontrado: " + clienteEncontrado.getNome());
@@ -57,5 +57,5 @@ class Cliente {
         return nome;
     }
 
-    // Getters para outros atributos...
+    
 }
